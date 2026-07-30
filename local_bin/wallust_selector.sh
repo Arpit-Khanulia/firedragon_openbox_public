@@ -7,69 +7,60 @@ set -euo pipefail
 
 WALL_DIR="${HOME}/Pictures/wallpapers"
 CACHE_DIR="${HOME}/.cache/thumbnails/bgselector"
-CACHE_INDEX="${CACHE_DIR}/.index"
 
 mkdir -p "$CACHE_DIR" "$WALL_DIR"
 
-# Build list of wallpapers
-current_index=$(mktemp)
-find "$WALL_DIR" -type f \( -iname '*.jpg' -o -iname '*.jpeg' -o -iname '*.png' -o -iname '*.webp' -o -iname '*.gif' \) -printf '%p\n' > "$current_index"
+# Generate thumbnails and build Rofi menu input using Python for 100% path safety
+ROFI_INPUT=$(python3 -c '
+import os, glob
 
-# Generate thumbnails in parallel
-max_jobs=$(nproc 2>/dev/null || echo 4)
+wall_dir = os.path.expanduser("~/Pictures/wallpapers")
+cache_dir = os.path.expanduser("~/.cache/thumbnails/bgselector")
+os.makedirs(cache_dir, exist_ok=True)
 
-generate_thumbnail() {
-    local img="$1"
-    local cache_dir="$2"
-    local wall_dir="$3"
-    
-    local rel_path="${img#$wall_dir/}"
-    local cache_name="${rel_path//\//_}"
-    cache_name="${cache_name%.*}.jpg"
-    local cache_file="$cache_dir/$cache_name"
-    
-    if [[ ! -f "$cache_file" ]]; then
-        magick "$img[0]" -thumbnail 330x540^ -gravity center -extent 330x540 -quality 80 "$cache_file" 2>/dev/null || true
-    fi
-}
-export -f generate_thumbnail
+valid_exts = (".png", ".jpg", ".jpeg", ".webp", ".gif", ".bmp")
+items = []
 
-if command -v xargs >/dev/null 2>&1; then
-    cat "$current_index" | xargs -P "$max_jobs" -I {} bash -c 'generate_thumbnail "$1" "$2" "$3"' _ {} "$CACHE_DIR" "$WALL_DIR"
+for root, dirs, files in os.walk(wall_dir):
+    for f in files:
+        if f.lower().endswith(valid_exts):
+            full_path = os.path.join(root, f)
+            rel_path = os.path.relpath(full_path, wall_dir)
+            cache_name = rel_path.replace("/", "_").replace("\\", "_") + ".jpg"
+            cache_path = os.path.join(cache_dir, cache_name)
+            
+            if not os.path.exists(cache_path):
+                os.system(f"magick \"{full_path}[0]\" -thumbnail 330x540^ -gravity center -extent 330x540 -quality 80 \"{cache_path}\" 2>/dev/null")
+            
+            if os.path.exists(cache_path):
+                items.append((rel_path, cache_path))
+
+items.sort(key=lambda x: x[0].strip().lower())
+
+for rel_path, cache_path in items:
+    print(f"{rel_path}\0icon\x1f{cache_path}")
+')
+
+if [[ -z "$ROFI_INPUT" ]]; then
+    notify-send "Wallpaper Selector" "No wallpapers found in ~/Pictures/wallpapers" -i dialog-warning
+    exit 1
 fi
 
-# Build Rofi menu input
-rofi_input=$(mktemp)
-while read -r img; do
-    rel_path="${img#$WALL_DIR/}"
-    cache_name="${rel_path//\//_}"
-    cache_name="${cache_name%.*}.jpg"
-    cache_file="$CACHE_DIR/$cache_name"
-    
-    if [[ -f "$cache_file" ]]; then
-        printf '%s\000icon\037%s\n' "$rel_path" "$cache_file"
-    fi
-done < "$current_index" > "$rofi_input"
+# Display Rofi thumbnail grid picker
+SELECTED=$(printf "%s" "$ROFI_INPUT" | rofi -dmenu -i -p "Select Wallpaper" -show-icons -config "$HOME/.config/rofi/bgselector/style.rasi" || true)
 
-rm -f "$current_index"
-
-# Display Rofi picker
-selected=$(rofi -dmenu -i -p "Select Wallpaper" -show-icons -config "$HOME/.config/rofi/bgselector/style.rasi" < "$rofi_input" || true)
-rm -f "$rofi_input"
-
-# Apply selected wallpaper & trigger Wallust recoloring
-if [[ -n "$selected" ]]; then
-    selected_path="$WALL_DIR/$selected"
-    if [[ -f "$selected_path" ]]; then
-        echo "[INFO] Applying wallpaper: $selected_path"
+if [[ -n "$SELECTED" ]]; then
+    SELECTED_PATH="$WALL_DIR/$SELECTED"
+    if [[ -f "$SELECTED_PATH" ]]; then
+        echo "[INFO] Applying selected wallpaper: $SELECTED_PATH"
         
         if command -v nitrogen >/dev/null 2>&1; then
-            nitrogen --set-zoom-fill --save "$selected_path" 2>/dev/null || true
+            nitrogen --set-zoom-fill --save "$SELECTED_PATH" 2>/dev/null || true
         elif command -v feh >/dev/null 2>&1; then
-            feh --bg-fill "$selected_path" 2>/dev/null || true
+            feh --bg-fill "$SELECTED_PATH" 2>/dev/null || true
         fi
         
         # Trigger Theme Synchronization
-        "$HOME/.config/openbox/scripts/theme-sync.sh" "$selected_path"
+        "$HOME/.config/openbox/scripts/theme-sync.sh" "$SELECTED_PATH"
     fi
 fi
