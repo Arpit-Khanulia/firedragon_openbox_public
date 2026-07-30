@@ -1,0 +1,35 @@
+# Yazi file manager configuration for Archcraft Openbox
+
+[opener]
+play = [
+    { run = 'vlc "$@"', orphan = true, for = "unix" },
+]
+edit = [
+    { run = 'cursor "$@"', desc = "Cursor", block = true, for = "unix" },
+    { run = 'geany "$@"', desc = "Geany", orphan = true, for = "unix" },
+]
+open = [
+    { run = 'xdg-open "$1"', desc = "Open", for = "unix" },
+]
+reveal = [
+    { run = 'xdg-open "$(dirname "$1")"', desc = "Reveal", for = "unix" },
+]
+
+[open]
+rules = [
+    { name = "*/", use = ["open", "edit", "reveal"] },
+    { mime = "text/*", use = ["edit", "reveal"] },
+    { mime = "image/*", use = ["open", "reveal"] },
+    { mime = "video/*", use = ["play", "reveal"] },
+    { mime = "audio/*", use = ["play", "reveal"] },
+    { name = "*", use = ["open", "reveal"] },
+]
+
+[mgr]
+show_hidden = true
+sort_by = "alphabetical"
+sort_sensitive = false
+sort_reverse = false
+sort_dir_first = true
+linemode = "none"
+show_symlink = true

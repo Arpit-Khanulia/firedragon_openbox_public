@@ -1,0 +1,15 @@
+# wallust v3 configuration for Archcraft Openbox
+
+backend = "full"
+color_space = "lab"
+palette = "harddark"
+check_contrast = true
+
+[templates]
+kitty = { src = 'kitty.conf', dst = '~/.config/kitty/colors.conf' }
+alacritty = { src = 'alacritty.toml', dst = '~/.config/alacritty/colors.toml' }
+rofi = { src = 'rofi.rasi', dst = '~/.config/rofi/colors/wallust.rasi' }
+dunst = { src = 'dunstrc', dst = '~/.config/dunst/dunstrc' }
+polybar = { src = 'polybar.ini', dst = '~/.config/polybar/colors.ini' }
+gtk3 = { src = 'gtk3.css', dst = '~/.config/gtk-3.0/colors.css' }
+gtk4 = { src = 'gtk4.css', dst = '~/.config/gtk-4.0/colors.css' }
