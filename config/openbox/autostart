@@ -53,3 +53,6 @@ ksuperkey -e 'Super_R=Alt_L|F1' &
 
 setxkbmap -option "ctrl:nocaps" &
 autokey-gtk &
+
+# Archcraft++ Wallust Dynamic Theme Sync
+$HOME/.config/openbox/scripts/theme-sync.sh &
