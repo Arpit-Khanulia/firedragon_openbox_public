@@ -1,0 +1,18 @@
+{
+	"activeWallpapers": {
+		"eDP1": {
+			"backgroundId": "${HOME}/.steam/steam/steamapps/workshop/content/431960/3004855662",
+			"screen": "eDP1",
+			"scaling": "fill",
+			"fps": 60,
+			"volume": 100,
+			"silent": false,
+			"noAutomute": false,
+			"noAudioProcessing": false,
+			"disableMouse": false,
+			"disableParallax": false,
+			"noFullscreenPause": false
+		}
+	},
+	"activePlaylist": null
+}

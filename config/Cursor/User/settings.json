@@ -1,0 +1,39 @@
+{
+  "window.commandCenter": false,
+  "workbench.layoutControl.enabled": false,
+  "window.titleBarStyle": "native",
+  "workbench.activityBar.orientation": "vertical",
+  "workbench.colorTheme": "Bearded Theme HC Midnight Void",
+  "workbench.iconTheme": "material-icon-theme",
+  "files.autoSave": "afterDelay",
+  "editor.fontSize": 16,
+  "window.menuBarVisibility": "toggle",
+  "window.customTitleBarVisibility": "windowed",
+  "cursor.cpp.disabledLanguages": ["typescript"],
+  "editor.formatOnSave": true,
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  },
+  "liveServer.settings.donotVerifyTags": true,
+  "tabnine.experimentalAutoImports": true,
+  "explorer.confirmDelete": false,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  },
+  "editor.fontFamily": "'JetBrainsMono Nerd Font','Droid Sans Mono', 'monospace', monospace",
+  "tabnine.cloudHost": "https://console.tabnine.com",
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  },
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "editor.tabSize": 2,
+}

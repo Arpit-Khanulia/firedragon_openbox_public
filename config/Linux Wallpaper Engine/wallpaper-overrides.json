@@ -1,0 +1,179 @@
+{
+	"overrides": {
+		"${HOME}/.steam/steam/steamapps/workshop/content/431960/3448877775": {
+			"compatibility": "broken",
+			"autoErrors": [
+				"Process exited unexpectedly"
+			],
+			"lastTested": 1784722598284
+		},
+		"${HOME}/.steam/steam/steamapps/workshop/content/431960/2781486699": {
+			"compatibility": "broken",
+			"autoErrors": [
+				"Process exited unexpectedly"
+			],
+			"lastTested": 1784722620042
+		},
+		"${HOME}/.steam/steam/steamapps/workshop/content/431960/3338555793": {
+			"compatibility": "broken",
+			"autoErrors": [
+				"Process exited unexpectedly"
+			],
+			"lastTested": 1784722620065
+		},
+		"${HOME}/.steam/steam/steamapps/workshop/content/431960/3034576611": {
+			"compatibility": "broken",
+			"autoErrors": [
+				"Process exited unexpectedly"
+			],
+			"lastTested": 1784722620067
+		},
+		"${HOME}/.steam/steam/steamapps/workshop/content/431960/3158070680": {
+			"compatibility": "broken",
+			"autoErrors": [
+				"Process exited unexpectedly"
+			],
+			"lastTested": 1784722620208
+		},
+		"${HOME}/.steam/steam/steamapps/workshop/content/431960/3277650572": {
+			"compatibility": "broken",
+			"autoErrors": [
+				"Process exited unexpectedly"
+			],
+			"lastTested": 1784722620210
+		},
+		"${HOME}/.steam/steam/steamapps/workshop/content/431960/3463520581": {
+			"compatibility": "broken",
+			"autoErrors": [
+				"Process exited unexpectedly"
+			],
+			"lastTested": 1784722620227
+		},
+		"${HOME}/.steam/steam/steamapps/workshop/content/431960/3295851268": {
+			"compatibility": "broken",
+			"autoErrors": [
+				"Process exited unexpectedly"
+			],
+			"lastTested": 1784722620341
+		},
+		"${HOME}/.steam/steam/steamapps/workshop/content/431960/3375644003": {
+			"compatibility": "broken",
+			"autoErrors": [
+				"Process exited unexpectedly"
+			],
+			"lastTested": 1784722620356
+		},
+		"${HOME}/.steam/steam/steamapps/workshop/content/431960/2793744444": {
+			"compatibility": "broken",
+			"autoErrors": [
+				"Process exited unexpectedly"
+			],
+			"lastTested": 1784722620360
+		},
+		"${HOME}/.steam/steam/steamapps/workshop/content/431960/3343642706": {
+			"compatibility": "broken",
+			"autoErrors": [
+				"Process exited unexpectedly"
+			],
+			"lastTested": 1784722620501
+		},
+		"${HOME}/.steam/steam/steamapps/workshop/content/431960/3695879773": {
+			"compatibility": "broken",
+			"autoErrors": [
+				"Process exited unexpectedly"
+			],
+			"lastTested": 1784722620515
+		},
+		"${HOME}/.steam/steam/steamapps/workshop/content/431960/3198029490": {
+			"compatibility": "broken",
+			"autoErrors": [
+				"Process exited unexpectedly"
+			],
+			"lastTested": 1784722620531
+		},
+		"${HOME}/.steam/steam/steamapps/workshop/content/431960/3004855662": {
+			"compatibility": "broken",
+			"autoErrors": [
+				"Process exited unexpectedly"
+			],
+			"lastTested": 1784722620707
+		},
+		"${HOME}/.steam/steam/steamapps/workshop/content/431960/3045030337": {
+			"compatibility": "broken",
+			"autoErrors": [
+				"Process exited unexpectedly"
+			],
+			"lastTested": 1784722620717
+		},
+		"${HOME}/.steam/steam/steamapps/workshop/content/431960/2671100396": {
+			"compatibility": "broken",
+			"autoErrors": [
+				"Process exited unexpectedly"
+			],
+			"lastTested": 1784722620722
+		},
+		"${HOME}/.steam/steam/steamapps/workshop/content/431960/3721871224": {
+			"compatibility": "broken",
+			"autoErrors": [
+				"Process exited unexpectedly"
+			],
+			"lastTested": 1784722620855
+		},
+		"${HOME}/.steam/steam/steamapps/workshop/content/431960/2477602742": {
+			"compatibility": "broken",
+			"autoErrors": [
+				"Process exited unexpectedly"
+			],
+			"lastTested": 1784722620872
+		},
+		"${HOME}/.steam/steam/steamapps/workshop/content/431960/2820546388": {
+			"compatibility": "broken",
+			"autoErrors": [
+				"Process exited unexpectedly"
+			],
+			"lastTested": 1784722620874
+		},
+		"${HOME}/.steam/steam/steamapps/workshop/content/431960/3066119986": {
+			"compatibility": "broken",
+			"autoErrors": [
+				"Process exited unexpectedly"
+			],
+			"lastTested": 1784722621008
+		},
+		"${HOME}/.steam/steam/steamapps/workshop/content/431960/819131668": {
+			"compatibility": "broken",
+			"autoErrors": [
+				"Process exited unexpectedly"
+			],
+			"lastTested": 1784722621024
+		},
+		"${HOME}/.steam/steam/steamapps/workshop/content/431960/2453990796": {
+			"compatibility": "broken",
+			"autoErrors": [
+				"Process exited unexpectedly"
+			],
+			"lastTested": 1784722621039
+		},
+		"${HOME}/.steam/steam/steamapps/workshop/content/431960/3422346578": {
+			"compatibility": "broken",
+			"autoErrors": [
+				"Process exited unexpectedly"
+			],
+			"lastTested": 1784722621152
+		},
+		"${HOME}/.steam/steam/steamapps/workshop/content/431960/826336550": {
+			"compatibility": "broken",
+			"autoErrors": [
+				"Process exited unexpectedly"
+			],
+			"lastTested": 1784722621167
+		},
+		"${HOME}/.steam/steam/steamapps/workshop/content/431960/3034287736": {
+			"compatibility": "broken",
+			"autoErrors": [
+				"Process exited unexpectedly"
+			],
+			"lastTested": 1784722621169
+		}
+	}
+}

@@ -1,0 +1,11 @@
+autokey-common
+autokey-gtk
+brave-bin
+cursor-bin
+libgdata
+libsoup
+linux-wallpaper-engine-bin
+linux-wallpaperengine-git
+pokego-bin
+rofi-lbonn-wayland-git
+webkit2gtk

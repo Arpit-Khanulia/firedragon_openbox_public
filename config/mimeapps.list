@@ -1,0 +1,23 @@
+[Added Associations]
+image/png=viewnior.desktop;
+image/jpeg=viewnior.desktop;
+image/gif=viewnior.desktop;
+image/svg+xml=viewnior.desktop;
+text/x-csrc=geany.desktop;
+text/plain=geany.desktop;
+application/x-shellscript=geany.desktop;
+application/x-theme=geany.desktop;
+application/json=geany.desktop;
+application/x-zerosize=geany.desktop;
+video/x-matroska=org.kde.dragonplayer.desktop;org.videolan.VLC.desktop;
+video/mp4=mplayer.desktop;org.kde.dragonplayer.desktop;vlc.desktop;
+
+[Default Applications]
+image/gif=viewnior.desktop
+image/svg+xml=viewnior.desktop
+application/x-zerosize=geany.desktop
+video/x-matroska=org.videolan.VLC.desktop
+video/mp4=vlc.desktop
+x-scheme-handler/http=brave-browser.desktop
+x-scheme-handler/https=brave-browser.desktop
+x-scheme-handler/claude-cli=claude-code-url-handler.desktop

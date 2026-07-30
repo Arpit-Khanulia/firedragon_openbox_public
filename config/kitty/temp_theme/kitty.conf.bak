@@ -1,0 +1,23 @@
+font_family      CaskaydiaCove Nerd Font Mono
+# bold_font        auto
+# italic_font      auto
+# bold_italic_font auto
+enable_audio_bell no
+include theme.conf
+# background_opacity 0.60
+
+font_size                   14
+window_padding_width        15
+hide_window_decorations yes
+allow_remote_control        yes
+listen_on                   unix:/tmp/kitty
+enabled_layouts             *
+dynamic_background_opacity  yes
+
+
+# # BEGIN_KITTY_FONTS
+# font_family      family="Pixel Code"
+# bold_font        auto
+# italic_font      auto
+# bold_italic_font auto
+# # END_KITTY_FONTS
