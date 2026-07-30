@@ -800,7 +800,7 @@
       </action>
     </keybind>
 
-  <keybind key="W-i"><action name="GoToDesktop"><to>previous</to><wrap>yes</wrap></action></keybind><keybind key="W-k"><action name="GoToDesktop"><to>next</to><wrap>yes</wrap></action></keybind><keybind key="A-u"><action name="PreviousWindow"><finalactions><action name="Focus" /><action name="Raise" /><action name="Unshade" /></finalactions></action></keybind><keybind key="A-o"><action name="NextWindow"><finalactions><action name="Focus" /><action name="Raise" /><action name="Unshade" /></finalactions></action></keybind><keybind key="A-space"><action name="Execute"><command>vicinae toggle</command></action></keybind></keyboard>
+  <keybind key="W-i"><action name="GoToDesktop"><to>previous</to><wrap>yes</wrap></action></keybind><keybind key="W-k"><action name="GoToDesktop"><to>next</to><wrap>yes</wrap></action></keybind><keybind key="A-space"><action name="Execute"><command>vicinae toggle</command></action></keybind><keybind key="A-y"><action name="GoToDesktop"><to>previous</to><wrap>yes</wrap></action></keybind><keybind key="A-h"><action name="GoToDesktop"><to>next</to><wrap>yes</wrap></action></keybind><keybind key="A-u"><action name="PreviousWindow"><finalactions><action name="Focus" /><action name="Raise" /></finalactions></action></keybind><keybind key="A-o"><action name="NextWindow"><finalactions><action name="Focus" /><action name="Raise" /></finalactions></action></keybind></keyboard>
   
   <mouse>
     <dragThreshold>4</dragThreshold>
